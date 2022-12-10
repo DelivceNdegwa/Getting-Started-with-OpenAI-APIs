@@ -27,7 +27,7 @@ data = {
             "model": "text-davinci-003",
             "prompt": f"Say {prompt_text}",
             "temperature": 0.7,
-            "max_tokens": 20
+            "max_tokens": 500
         }
 
 response = requests.post(url=url, headers=headers, json=data)
