@@ -15,7 +15,7 @@
           <textarea class="form-control" id="user-message"></textarea>
           <small id="empty-message" class="text-danger d-none">Please add a message</small>
         </div>
-        <button  id="send-message" class="btn btn-warning">Send message</button>
+        <button  id="send-message" class="btn btn-warning mb-3">Send message</button>
     
 {% endblock %}
 
@@ -101,7 +101,7 @@
                                             <div class="card-body d-flex align-items-center">
                                                 <div>
                                                     <p class="lead ${textColor}">${message.replace(/<[^>]+>/g, '')}</p>
-                                                    <small class="${textColor} d-block">${dateTime}<small>
+                                                    <!--<small class="${textColor} d-block">${dateTime}<small>-->
                                                 </div>
                                             </div>
                                         </div>
