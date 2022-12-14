@@ -1,0 +1,20 @@
+databases:
+  - name: my_open_ai
+    databaseName: my_open_ai
+    user: my_open_ai
+
+services:
+  - type: web
+    name: my_open_ai
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn my_open_ai.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: my_open_ai
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
