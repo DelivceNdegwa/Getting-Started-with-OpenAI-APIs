@@ -31,13 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # daphne must be listed before django.contrib.staticfiles
+    'daphne',
+    
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bot'
+    
+    'bot',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'my_open_ai.wsgi.application'
+ASGI_APPLICATION = 'my_open_ai.asgi.application'
 
 
 # Database
