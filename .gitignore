@@ -1,3 +1,4 @@
 .env
 openaienv
+__pycache__
 
